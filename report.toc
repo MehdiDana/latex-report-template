@@ -1,0 +1,14 @@
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Summary}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Motivation}{6}{section.1.2}
+\contentsline {chapter}{\numberline {2}Methodology}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Assumption}{8}{section.2.1}
+\contentsline {section}{\numberline {2.2}Mathematics}{8}{section.2.2}
+\contentsline {section}{\numberline {2.3}Programming}{9}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Java}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Logic}{9}{subsection.2.3.2}
+\contentsline {chapter}{\numberline {3}Conclusion}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}Summary}{10}{section.3.1}
+\contentsline {chapter}{\numberline {4}Reference and Appendix}{11}{chapter.4}
+\contentsline {section}{Bibliography}{12}{section*.5}
+\contentsline {section}{Appendices}{13}{chapter*.6}

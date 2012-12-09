@@ -1,0 +1,186 @@
+% Template for report using LaTex
+\documentclass[11pt,a4paper]{report}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{fullpage}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{verbatim}
+\usepackage{mathtools}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=Prolog,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=false,
+  tabsize=3 
+}
+
+\setlength{\headheight}{15.2pt}
+\headsep = 25pt
+\pagestyle{fancy}
+\lhead{Left heading} % To be changed
+\rhead {Right heading} % To be changed
+\lfoot{University of Huddersfield } % To be changed
+\rfoot{Right footer } % To be changed
+\usepackage[pdfauthor={Mehdi Dana},% Change to your name
+pdfkeywords={LaTex report template - University of Huddersfield},%
+pdftitle={LaTex report template },% Change to your document title
+pdfsubject={Report },% % Change to your subject area
+pagebackref=true,%
+pdftex]{hyperref}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,% change citation reference colour
+    filecolor=black,%
+    linkcolor=black,% change links colour
+    urlcolor=blue 
+}
+
+\begin{document}
+% This is the first page, please change it to your information
+\title{ A report template in \LaTeX{} for students }
+\author{Your name \\ 
+Email: username@hud.ac.uk \\
+Supervisor:  \{Your supervisor name;  their emails \} \\
+School of Computing and Engineering, University of Huddersfield \\
+%\texttt{ Module name}  
+%\thanks {Thanks to: Your module lecturer  } \\
+}
+\date{ date } % date 
+\maketitle
+
+\begin{abstract}
+This is a report template in \LaTeX{} for students in University of Huddersfield, see university logo in figure \ref{fig: hud_fig} (example of referencing to figure). \\
+You will find some other example such as \textit{including figure} and \textit{listing}.
+
+\end{abstract}
+
+\chapter*{Acknowledgement}
+% This is an example of acknowledgement
+I am grateful to my supervisor, Prof. X for his advice and guidance. \\
+
+\tableofcontents % show table of contents
+
+\listoffigures	% show list of figures
+
+\chapter{Introduction}
+\label{Introduction}
+\newpage
+\section{Summary}
+The purpose of this paper was to help students use \LaTeX{} because of many reasons:
+\begin{itemize}
+\item Latex has user friendly interface
+\item In latex, you get what you mean
+\end{itemize}
+This is introduction. Lets start with some quotes \\
+Joy in looking and comprehending is nature's most beautiful gift \footnote{Albert Einstein}.
+
+\newpage
+\section{Motivation}
+I am inspired by this quote from Confiuos; "Find a job you love, you'll never work a day in your life."
+
+
+\chapter{Methodology}
+\label{Methodology}
+\newpage
+\section{Assumption}
+We assumed that everyone who uses this template has at least basic knowledge of latex.
+\bigskip
+\begin{figure}[hb]
+\centering
+\includegraphics[width=6in]{figures/dream.png} 
+\caption{Example of a figure }
+% explaination 
+This figure illustrates ...  
+\label{fig: dream}
+\end{figure}
+
+\section{Mathematics}
+It is easy to show a matrix in latex, for example we write 
+$\begin{bmatrix}
+	0 & 1 & 2 \\
+	1 & 2 & 1 \\
+	0 & 2 & 3
+\end{bmatrix}$
+in the same line, however we could write 
+\[
+	A = \begin{bmatrix}
+		0 & 1 & 2 \\
+		1 & 2 & 1 \\
+		0 & 2 & 3  
+	\end{bmatrix}
+\]
+Here is citation \cite{Prof_Lee}
+
+\newpage
+\section{Programming}
+\subsection{Java}
+In \LaTeX{} you can include Java code, for example 
+\lstset{numbers=left, stepnumber=2, caption= HelloWorld.Java, label=HelloWorld}
+\lstinputlisting{codes/HelloWorld.java}
+Similarly, it is easy to include any other programming languages such as C++ and PHP.
+\\ \\
+You could write java code directly into file, for example listing \ref{HelloWorld2} is not included.  
+\lstset{numbers=left, stepnumber=2, caption= HelloWorld2, label=HelloWorld2}
+\begin{lstlisting}
+	/* try and catch example */
+	try{
+		System.out.println("Hello World");
+	}catch (Exception e){
+		System.out.println("Failed to print");
+	}
+\end{lstlisting}
+
+\subsection{Logic}
+It is \emph{hard} to write this in word documents: 
+\[
+ \forall x \in X, \quad \exists y \leq \epsilon
+\]
+
+
+\chapter{Conclusion}
+\section{Summary}
+This was a report template in latex, we tried to keep it simple so you could understand and change it to meet your requirement.
+
+\chapter{Reference and Appendix}
+\newpage
+
+% please run bibtex in order to see references in your documents
+\addcontentsline{toc}{section}{Bibliography}
+\nocite{*}
+\bibliographystyle{plain}		% (uses file "plain.bst")
+\bibliography{references}		% expects file "myrefs.bib"
+
+\newpage
+\addcontentsline{toc}{section}{Appendices}
+\section*{Appendices}
+\bigskip
+\begin{figure}[hb]
+\centering
+\includegraphics[width=6in]{figures/hud.png} 
+\caption{ University of Huddersfield logo  }
+% explaination 
+This is logo of Huddersfield University  
+\label{fig: hud_fig}
+\end{figure}
+
+\end{document}
+% Copyright: University of Huddersfield [Prof. Lee McCluskey t.l.mccluskey@hud.ac.uk  and Mehdi Dana u0960731@unimail.hud.ac.uk]
